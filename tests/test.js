@@ -18,7 +18,7 @@ describe("Students", () => {
                   });
          });
         // Test to get single student record
-        it("should get a single student record", (done) => {
+        it("should get a single students record", (done) => {
              const id = 1;
              chai.request(app)
                  .get(`/${id}`)
