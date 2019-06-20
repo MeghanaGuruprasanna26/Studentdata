@@ -36,7 +36,7 @@ describe("Students", () => {
                  .get(`/${id}`)
                  .end((err, res) => {
                 try {
-                 res.should.have.status(200);
+                 res.should.have.status(404);
                  done();
                 } catch(e) {
                     done(e);
