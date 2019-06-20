@@ -35,9 +35,16 @@ describe("Students", () => {
              chai.request(app)
                  .get(`/${id}`)
                  .end((err, res) => {
-                     res.should.have.status(404);
-                     done();
-                  });
+                try {
+                 res.should.have.status(200);
+                 done();
+                } catch(e) {
+                    done(e);
+                }
+            });
          });
     });
 });
+
+
+
